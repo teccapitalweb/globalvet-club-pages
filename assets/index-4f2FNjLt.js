@@ -61,7 +61,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
   <span class="gv-ch-mode__visual"><img src="${n}" alt="" loading="lazy"><span class="gv-ch-mode__icon">${W(t)}</span></span>
   <span class="gv-ch-mode__copy"><small>${G(r)}</small><strong>${G(i)}</strong><em>${G(a)}</em></span>
   <span class="gv-ch-mode__stat"><small>${G(o)}</small><i><b style="width:${Math.max(0,Math.min(100,s))}%"></b></i></span>
-  <span class="gv-ch-mode__cta">${G(l)} ${W(`arrow`)}</span>
+  <span class="gv-ch-mode__cta">${G(l)}</span>
   <span class="gv-ch-mode__go">${W(`arrow`)}</span>
 </button>`;function F_(){let e=u_(),t=y_(e.xp),n=e.daily?.date===h_(),r=[n,e.quizAttempts>0,e.cardsReviewed.length>0],i=r.filter(Boolean).length,a=Math.round(e.casesResolved.length/i_.length*100),o=Math.round(e.cardsMastered.length/a_.length*100),s=t.next?`${t.remaining} XP para ${t.next.name}`:`Nivel máximo de esta versión`,c=[{action:`daily`,icon:`calendar`,title:`Reto diario`,detail:n?`Completado por hoy`:`Una pregunta para empezar`,done:n,disabled:n},{action:`quiz-start`,icon:`zap`,title:`Primera ronda`,detail:r[1]?`Puedes jugar otra vez`:`Termina un quiz relámpago`,done:r[1],disabled:!1},{action:`flash-start`,icon:`brain`,title:`Memoria activa`,detail:r[2]?`Continúa el repaso`:`Repasa una tarjeta`,done:r[2],disabled:!1}].map((e,t)=>`<li><button class="gv-ch-mission__step${e.done?` is-done`:``}" type="button" data-ch-action="${e.action}"${e.disabled?` disabled`:``}>
     <span class="gv-ch-mission__number">${String(t+1).padStart(2,`0`)}</span>
@@ -127,7 +127,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
       <h2>${G(e.prompt)}</h2>
       <div class="gv-ch-options">${n}</div>
       ${r}
-      ${t?`<button class="gv-ch-primary" type="button" data-ch-action="quiz-next">${K.index===K.questions.length-1?`Ver resultado`:`Siguiente pregunta`} ${W(`arrow`)}</button>`:`<p class="gv-ch-hint">Elige una respuesta para continuar.</p>`}
+      ${t?`<button class="gv-ch-primary" type="button" data-ch-action="quiz-next">${K.index===K.questions.length-1?`Ver resultado`:`Siguiente pregunta`}</button>`:`<p class="gv-ch-hint">Elige una respuesta para continuar.</p>`}
     </article>
   </section>`,t?`[data-ch-feedback]`:`[data-ch-heading]`)}function R_(){if(!K)return;let e=f_(u_(),K.correct,K.questions.length);d_(e.state),C_={correct:K.correct,total:K.questions.length,percentage:e.percentage,earned:e.earned},z_()}function z_(){if(!C_)return F_();let e=C_.percentage>=80;j_(`<section class="gv-ch-play">
     ${N_(`Ronda terminada`,`Tu resultado`,`El progreso se guardó únicamente en este dispositivo.`)}
@@ -136,7 +136,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
       <small>${e?`Criterio sólido`:`Sigue practicando`}</small>
       <h2>${C_.percentage}%</h2>
       <p>${C_.correct} de ${C_.total} respuestas correctas · ganaste <strong>${C_.earned} XP</strong>.</p>
-      <div><button class="gv-ch-secondary" type="button" data-ch-action="quiz-start">${W(`refresh`)} Repetir ronda</button><button class="gv-ch-primary" type="button" data-ch-action="hub">Volver a Retos ${W(`arrow`)}</button></div>
+      <div><button class="gv-ch-secondary" type="button" data-ch-action="quiz-start">${W(`refresh`)} Repetir ronda</button><button class="gv-ch-primary" type="button" data-ch-action="hub">Volver a Retos</button></div>
     </article>
   </section>`)}function B_(){let e=u_(),t=i_.map((t,n)=>{let r=e.casesResolved.includes(t.id);return`<button class="gv-ch-case-card${r?` is-done`:``}" type="button" data-ch-action="case-open" data-id="${G(t.id)}">
       <span>${String(n+1).padStart(2,`0`)}</span><div><small>${G(t.area)}</small><strong>${G(t.title)}</strong><p>${G(t.situation)}</p></div><b>${W(r?`correct`:`arrow`)}</b>
@@ -148,22 +148,22 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
     <article class="gv-ch-question gv-ch-question--case">
       <span class="gv-ch-question__icon">${W(`case`)}</span><h2>${G(q.question)}</h2>
       <div class="gv-ch-options">${t}</div>
-      ${e?`<div class="gv-ch-feedback ${w_===q.correct?`is-correct`:`is-learning`}" role="status" tabindex="-1" data-ch-feedback>${W(w_===q.correct?`correct`:`idea`)}<div><strong>${w_===q.correct?`Caso resuelto${T_?` · +${T_} XP`:``}`:`Revisa el criterio`}</strong><p>${G(q.explanation)}</p></div></div><button class="gv-ch-primary" type="button" data-ch-action="cases">Volver a los casos ${W(`arrow`)}</button>`:`<p class="gv-ch-hint">Selecciona la decisión más responsable.</p>`}
+      ${e?`<div class="gv-ch-feedback ${w_===q.correct?`is-correct`:`is-learning`}" role="status" tabindex="-1" data-ch-feedback>${W(w_===q.correct?`correct`:`idea`)}<div><strong>${w_===q.correct?`Caso resuelto${T_?` · +${T_} XP`:``}`:`Revisa el criterio`}</strong><p>${G(q.explanation)}</p></div></div><button class="gv-ch-primary" type="button" data-ch-action="cases">Volver a los casos</button>`:`<p class="gv-ch-hint">Selecciona la decisión más responsable.</p>`}
     </article>
   </section>`,e?`[data-ch-feedback]`:`[data-ch-heading]`)}function H_(){let e=u_(),t=a_.findIndex(t=>!e.cardsMastered.includes(t.id));E_=t>=0?t:0,D_=!1,O_=0,U_()}function U_(){let e=a_[E_];if(!e)return W_();j_(`<section class="gv-ch-play">
     ${N_(e.area,`Tarjetas de repaso`,`Lee el concepto, recuerda su significado y voltea la tarjeta.`,`Tarjeta ${E_+1} de ${a_.length}`)}
     <div class="gv-ch-progress"><i style="width:${(E_+(D_?.5:0))/a_.length*100}%"></i></div>
     <article class="gv-ch-flash${D_?` is-revealed`:``}">
       <span>${W(D_?`book`:`brain`)}</span><small>${D_?`Definición`:`Concepto`}</small><h2>${G(D_?e.back:e.front)}</h2>
-      ${D_?`<div class="gv-ch-flash__actions"><button class="gv-ch-secondary" type="button" data-ch-action="flash-rate" data-mastered="false">${W(`refresh`)} Repasar después</button><button class="gv-ch-primary" type="button" data-ch-action="flash-rate" data-mastered="true">${W(`check`)} Lo domino</button></div>`:`<button class="gv-ch-primary" type="button" data-ch-action="flash-reveal">Mostrar respuesta ${W(`arrow`)}</button>`}
+      ${D_?`<div class="gv-ch-flash__actions"><button class="gv-ch-secondary" type="button" data-ch-action="flash-rate" data-mastered="false">${W(`refresh`)} Repasar después</button><button class="gv-ch-primary" type="button" data-ch-action="flash-rate" data-mastered="true">${W(`check`)} Lo domino</button></div>`:`<button class="gv-ch-primary" type="button" data-ch-action="flash-reveal">Mostrar respuesta</button>`}
     </article>
   </section>`)}function W_(){j_(`<section class="gv-ch-play">
     ${N_(`Memoria activa`,`Sesión completada`,`Tus tarjetas revisadas quedaron registradas localmente.`)}
-    <article class="gv-ch-result"><span class="gv-ch-result__icon">${W(`brain`)}</span><small>Repaso terminado</small><h2>${O_}</h2><p>tarjetas revisadas en esta sesión. Puedes volver para reforzar las que marcaste como pendientes.</p><div><button class="gv-ch-secondary" type="button" data-ch-action="flash-start">${W(`refresh`)} Repasar otra vez</button><button class="gv-ch-primary" type="button" data-ch-action="hub">Volver a Retos ${W(`arrow`)}</button></div></article>
+    <article class="gv-ch-result"><span class="gv-ch-result__icon">${W(`brain`)}</span><small>Repaso terminado</small><h2>${O_}</h2><p>tarjetas revisadas en esta sesión. Puedes volver para reforzar las que marcaste como pendientes.</p><div><button class="gv-ch-secondary" type="button" data-ch-action="flash-start">${W(`refresh`)} Repasar otra vez</button><button class="gv-ch-primary" type="button" data-ch-action="hub">Volver a Retos</button></div></article>
   </section>`)}function G_(){let e=__(),t=k_!==null,n=e.options.map((n,r)=>{let i=t&&r===e.correct,a=t&&r===k_&&r!==e.correct;return`<button class="gv-ch-option${i?` is-correct`:``}${a?` is-wrong`:``}" type="button" data-ch-action="daily-answer" data-index="${r}" ${t?`disabled`:``}><span>${String.fromCharCode(65+r)}</span><strong>${G(n)}</strong>${i?W(`correct`):a?W(`wrong`):``}</button>`}).join(``);j_(`<section class="gv-ch-play">
     ${N_(`Reto diario · `+e.area,`Una decisión para hoy`,`Responde una sola pregunta y conserva tu racha.`)}
     <article class="gv-ch-question gv-ch-question--daily"><span class="gv-ch-question__icon">${W(`calendar`)}</span><h2>${G(e.prompt)}</h2><div class="gv-ch-options">${n}</div>
-      ${t?`<div class="gv-ch-feedback ${k_===e.correct?`is-correct`:`is-learning`}" role="status" tabindex="-1" data-ch-feedback>${W(k_===e.correct?`correct`:`idea`)}<div><strong>${k_===e.correct?`Reto superado`:`Aprendizaje registrado`} · +${A_} XP</strong><p>${G(e.explanation)}</p></div></div><button class="gv-ch-primary" type="button" data-ch-action="hub">Volver a Retos ${W(`arrow`)}</button>`:`<p class="gv-ch-hint">Tienes un intento para el reto de hoy.</p>`}
+      ${t?`<div class="gv-ch-feedback ${k_===e.correct?`is-correct`:`is-learning`}" role="status" tabindex="-1" data-ch-feedback>${W(k_===e.correct?`correct`:`idea`)}<div><strong>${k_===e.correct?`Reto superado`:`Aprendizaje registrado`} · +${A_} XP</strong><p>${G(e.explanation)}</p></div></div><button class="gv-ch-primary" type="button" data-ch-action="hub">Volver a Retos</button>`:`<p class="gv-ch-hint">Tienes un intento para el reto de hoy.</p>`}
     </article>
   </section>`,t?`[data-ch-feedback]`:`[data-ch-heading]`)}function K_(e){let t=e.target.closest(`[data-ch-action]`);if(!t||!S_?.contains(t))return;let n=t.dataset.chAction;if(n===`hub`)return F_();if(n===`quiz-start`)return I_();if(n===`quiz-answer`&&K&&K.selected===null)return K.selected=Number(t.dataset.index),K.selected===K.questions[K.index].correct&&(K.correct+=1),L_();if(n===`quiz-next`&&K)return K.index>=K.questions.length-1?R_():(K.index+=1,K.selected=null,L_());if(n===`cases`)return B_();if(n===`case-open`)return q=i_.find(e=>e.id===t.dataset.id)||null,w_=null,T_=0,V_();if(n===`case-answer`&&q&&w_===null){w_=Number(t.dataset.index);let e=p_(u_(),q.id,w_===q.correct);return T_=e.earned,d_(e.state),V_()}if(n===`flash-start`)return H_();if(n===`flash-reveal`)return D_=!0,U_();if(n===`flash-rate`&&D_){let e=a_[E_];return d_(m_(u_(),e.id,t.dataset.mastered===`true`).state),O_+=1,E_+=1,D_=!1,U_()}if(n===`daily`)return k_=null,A_=0,G_();if(n===`daily-answer`&&k_===null){let e=__();k_=Number(t.dataset.index);let n=v_(u_(),new Date,k_===e.correct);return A_=n.earned,d_(n.state),G_()}}function q_(){return`<section class="club-page club-page--challenges"><div data-challenge-root></div></section>`}function J_(e){let t=e.querySelector(`[data-challenge-root]`);t&&(S_=t,K=null,q=null,k_=null,t.addEventListener(`click`,K_),F_())}function J(e){return e.replace(/[&<>"']/g,e=>({"&":`&amp;`,"<":`&lt;`,">":`&gt;`,'"':`&quot;`,"'":`&#39;`})[e]||e)}function Y_(e,t){return e.openings.filter(e=>e.courseId===t)}function X_(e,t){let n=Y_(t,e.id).length;return`<a class="pcard connected-course" href="#/club/curso/${encodeURIComponent(e.id)}">
     <div class="pcard__media"><div class="course-cover course-cover--photo">${e.imagen?`<img src="${J(e.imagen)}" alt="" loading="lazy">`:``}</div><span class="pcard__badge pcard__badge--outline">${n?`${n} ${n===1?`clase abierta`:`clases abiertas`}`:J(e.area)}</span></div>
@@ -205,7 +205,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
       ${i}
       <div class="pcard__foot">
         <span class="pcard__author"><span class="pcard__avatar" aria-hidden="true">${Z(Sv(e.instructor))}</span><small>${Z(e.instructor)}</small></span>
-        <span class="pcard__cta">${wv(n,r)} ${X(`arrow`)}</span>
+        <span class="pcard__cta">${wv(n,r)}</span>
       </div>
     </div>
   </a>`}function Ev(e){return e.id.startsWith(`aviso-`)?`<span class="nfeed__badge">${X(`newspaper`)} Aviso local · Muestra</span>`:`<span class="nfeed__badge">${X(`newspaper`)} ${Z(e.fuente)}<em class="nfeed__sep">·</em>${Z(Lg(e.fecha))}</span>`}function Dv(e,t,n){let r=e.link&&e.link!==`#`,i=Z(e.link||`#`);return r?e.link.startsWith(`#`)||e.link.startsWith(`/`)?`<a class="nfeed__card ${n}" href="${i}">${t}</a>`:`<a class="nfeed__card ${n}" href="${i}" target="_blank" rel="noopener noreferrer">${t}</a>`:`<div class="nfeed__card ${n} is-inactive">${t}</div>`}function Ov(e){return Dv(e,`
@@ -233,23 +233,23 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
     </header>
     <div data-nfeed-body>${r}</div>
     <footer class="nfeed__foot" data-nfeed-foot></footer>
-  </section>`}function Mv(e){let t=R.read(),n=xg(t),r={};for(let e of Y)r[e.id]=e.clases.length;let i=Sg(t,r),a=Cg(t),o=wg(a),s=Eg(t.activityDays??[]),c=Y.filter(e=>{let t=xv(e);return t.completed.length>0&&!t.done}),l=Y.filter(e=>xv(e).completed.length===0),u=(l.length?l:Y).slice(0,4),d=c.length?c[0]:Y[0],f=Y.findIndex(e=>e.id===d.id),p=xv(d),m=d.clases.find(e=>!p.completed.includes(e.n))??d.clases[0],h=p.completed.length>0,g=new Date,_=(g.getDay()+6)%7,v=new Date(g.getFullYear(),g.getMonth(),g.getDate()-_),y=new Set(t.activityDays??[]),b=[`L`,`M`,`X`,`J`,`V`,`S`,`D`],ee=Array.from({length:7},(e,t)=>{let n=new Date(v.getFullYear(),v.getMonth(),v.getDate()+t),r=`${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,`0`)}-${String(n.getDate()).padStart(2,`0`)}`,i=y.has(r),a=r===`${g.getFullYear()}-${String(g.getMonth()+1).padStart(2,`0`)}-${String(g.getDate()).padStart(2,`0`)}`;return`<span class="dash-dia${i?` is-active`:``}${a?` is-today`:``}" aria-label="${b[t]}"><em>${b[t]}</em></span>`}).join(``),te=[];s.currentDays>0&&te.push(`<a class="dash-pill dash-pill--streak" href="#/club/logros">${X(`flame`)}<strong>${s.currentDays}</strong> ${s.currentDays===1?`día`:`días`} de racha</a>`),a>0&&te.push(`<a class="dash-pill dash-pill--xp" href="#/club/logros">${X(`star`)}<strong>${a}</strong> XP</a>`);let ne=(()=>{let e=g.getHours();return e<12?`Buenos días`:e<19?`Buenas tardes`:`Buenas noches`})(),re=(()=>{let e=g.toLocaleDateString(`es-MX`,{weekday:`long`,day:`numeric`,month:`long`});return e.charAt(0).toUpperCase()+e.slice(1)})(),ie=h?`<div class="dash-cta__bar" aria-label="${p.percentage}% completado"><span style="width:${p.percentage}%"></span><em>${p.percentage}%</em></div>`:``,x=!!mg(m.video),S=x?h?`Clase ${m.n} de ${d.clases.length} · ${d.categoria}`:`${d.clases.length} clases · ${d.categoria} · ${d.nivel}`:`${d.clases.length} clases inventariadas · Videos pendientes de incorporación autorizada`,C=x?h?`Continuar donde quedaste`:`Empieza tu primera clase`:h?`Tu ruta guardada`:`Explora el temario`,ae=d.titulo,oe=x?h?`<a class="club-button" href="#/club/curso/${d.id}/clase/${m.n}">Continuar clase ${X(`play`)}</a>`:`<a class="club-button" href="#/club/curso/${d.id}/clase/${m.n}">Ver la primera clase ${X(`play`)}</a>`:`<a class="club-button" href="#/club/curso/${d.id}">${h?`Ver mi avance`:`Explorar temario`} ${X(`arrow`)}</a>`,se=`<a class="dash-cta__link" href="#/club/cursos">Explorar el catálogo ${X(`arrow`)}</a>`,w=d.imagen?`<img class="dash-cta__bg" src="${d.imagen}" alt="" fetchpriority="high">`:``,ce=[{href:`#/club/comunidad`,icon:`messages-square`,label:`Comunidad`,meta:`Foro local`},{href:`#/club/materiales`,icon:`library`,label:`Materiales`,meta:`Biblioteca`},{href:`#/club/herramientas`,icon:`wrench`,label:`Herramientas`,meta:`Apoyo local`},{href:`#/club/logros`,icon:`award`,label:`Logros`,meta:`Tu avance`},{href:`#/club/certificados`,icon:`award`,label:`Certificados`,meta:`Elegibilidad`}].map((e,t)=>`<a class="dash-qlink dash-qlink--${t%5}" href="${e.href}"><span>${X(e.icon)}</span><strong>${Z(e.label)}</strong><small>${Z(e.meta)}</small></a>`).join(``),T=c.length?`<section class="dash-stack">
+  </section>`}function Mv(e){let t=R.read(),n=xg(t),r={};for(let e of Y)r[e.id]=e.clases.length;let i=Sg(t,r),a=Cg(t),o=wg(a),s=Eg(t.activityDays??[]),c=Y.filter(e=>{let t=xv(e);return t.completed.length>0&&!t.done}),l=Y.filter(e=>xv(e).completed.length===0),u=(l.length?l:Y).slice(0,4),d=c.length?c[0]:Y[0],f=Y.findIndex(e=>e.id===d.id),p=xv(d),m=d.clases.find(e=>!p.completed.includes(e.n))??d.clases[0],h=p.completed.length>0,g=new Date,_=(g.getDay()+6)%7,v=new Date(g.getFullYear(),g.getMonth(),g.getDate()-_),y=new Set(t.activityDays??[]),b=[`L`,`M`,`X`,`J`,`V`,`S`,`D`],ee=Array.from({length:7},(e,t)=>{let n=new Date(v.getFullYear(),v.getMonth(),v.getDate()+t),r=`${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,`0`)}-${String(n.getDate()).padStart(2,`0`)}`,i=y.has(r),a=r===`${g.getFullYear()}-${String(g.getMonth()+1).padStart(2,`0`)}-${String(g.getDate()).padStart(2,`0`)}`;return`<span class="dash-dia${i?` is-active`:``}${a?` is-today`:``}" aria-label="${b[t]}"><em>${b[t]}</em></span>`}).join(``),te=[];s.currentDays>0&&te.push(`<a class="dash-pill dash-pill--streak" href="#/club/logros">${X(`flame`)}<strong>${s.currentDays}</strong> ${s.currentDays===1?`día`:`días`} de racha</a>`),a>0&&te.push(`<a class="dash-pill dash-pill--xp" href="#/club/logros">${X(`star`)}<strong>${a}</strong> XP</a>`);let ne=(()=>{let e=g.getHours();return e<12?`Buenos días`:e<19?`Buenas tardes`:`Buenas noches`})(),re=(()=>{let e=g.toLocaleDateString(`es-MX`,{weekday:`long`,day:`numeric`,month:`long`});return e.charAt(0).toUpperCase()+e.slice(1)})(),ie=h?`<div class="dash-cta__bar" aria-label="${p.percentage}% completado"><span style="width:${p.percentage}%"></span><em>${p.percentage}%</em></div>`:``,x=!!mg(m.video),S=x?h?`Clase ${m.n} de ${d.clases.length} · ${d.categoria}`:`${d.clases.length} clases · ${d.categoria} · ${d.nivel}`:`${d.clases.length} clases inventariadas · Videos pendientes de incorporación autorizada`,C=x?h?`Continuar donde quedaste`:`Empieza tu primera clase`:h?`Tu ruta guardada`:`Explora el temario`,ae=d.titulo,oe=x?h?`<a class="club-button" href="#/club/curso/${d.id}/clase/${m.n}">Continuar clase ${X(`play`)}</a>`:`<a class="club-button" href="#/club/curso/${d.id}/clase/${m.n}">Ver la primera clase ${X(`play`)}</a>`:`<a class="club-button" href="#/club/curso/${d.id}">${h?`Ver mi avance`:`Explorar temario`}</a>`,se=d.imagen?`<img class="dash-cta__bg" src="${d.imagen}" alt="" fetchpriority="high">`:``,w=[{href:`#/club/comunidad`,icon:`messages-square`,label:`Comunidad`,meta:`Foro local`},{href:`#/club/materiales`,icon:`library`,label:`Materiales`,meta:`Biblioteca`},{href:`#/club/herramientas`,icon:`wrench`,label:`Herramientas`,meta:`Apoyo local`},{href:`#/club/logros`,icon:`award`,label:`Logros`,meta:`Tu avance`},{href:`#/club/certificados`,icon:`award`,label:`Certificados`,meta:`Elegibilidad`}].map((e,t)=>`<a class="dash-qlink dash-qlink--${t%5}" href="${e.href}"><span>${X(e.icon)}</span><strong>${Z(e.label)}</strong><small>${Z(e.meta)}</small></a>`).join(``),ce=c.length?`<section class="dash-stack">
         <header class="dash-section-head">
           <div><p class="club-kicker">En marcha</p><h2>Sigue avanzando</h2></div>
-          <a class="dash-section-head__cta" href="#/club/cursos">Ver todos ${X(`arrow`)}</a>
+          <a class="dash-section-head__cta" href="#/club/cursos">Ver todos</a>
         </header>
         <div class="course-grid">${c.slice(0,4).map(e=>Tv(e,Y.findIndex(t=>t.id===e.id))).join(``)}</div>
-      </section>`:``,le=`<section class="dash-stack">
+      </section>`:``,T=`<section class="dash-stack">
     <header class="dash-section-head">
       <div><p class="club-kicker">Recomendado para ti</p><h2>Rutas por explorar</h2></div>
-      <a class="dash-section-head__cta" href="#/club/cursos">Ver las ${Y.length} ${X(`arrow`)}</a>
+      <a class="dash-section-head__cta" href="#/club/cursos">Ver las ${Y.length}</a>
     </header>
     <div class="course-grid">${u.map(e=>Tv(e,Y.findIndex(t=>t.id===e.id))).join(``)}</div>
-  </section>`,ue=`<article class="dash-xp">
+  </section>`,le=`<article class="dash-xp">
     <div class="dash-xp__badge"><small>Nivel ${o.level}</small><strong>${Z(o.name)}</strong></div>
     <div class="dash-xp__bar"><span style="width:${Math.round(o.progress*100)}%"></span></div>
     <small class="dash-xp__hint">${a} XP · ${o.xpForNext>0?`${o.xpInLevel}/${o.xpForNext} para subir`:`Nivel máximo`}</small>
-  </article>`,de=`<article class="dash-streak">
+  </article>`,ue=`<article class="dash-streak">
     <div class="dash-streak__head">
       <span class="dash-streak__ico">${X(`flame`)}</span>
       <div>
@@ -271,20 +271,20 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
 
       <div class="dash-top">
         <article class="dash-cta${h?``:` dash-cta--welcome`}">
-          ${w}
+          ${se}
           <div class="dash-cta__inner">
             <p class="dash-cta__eyebrow">${C}</p>
             <h2 class="dash-cta__title">${Z(ae)}</h2>
             <p class="dash-cta__meta">${Z(S)}</p>
             ${ie}
-            <div class="dash-cta__actions">${oe}${se}</div>
+            <div class="dash-cta__actions">${oe}<a class="dash-cta__link" href="#/club/cursos">Explorar el catálogo</a></div>
           </div>
           <span class="dash-cta__badge" aria-hidden="true">${String(f+1).padStart(2,`0`)}</span>
         </article>
 
         <aside class="dash-side">
+          ${le}
           ${ue}
-          ${de}
         </aside>
       </div>
 
@@ -300,14 +300,14 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
       </div>
 
       <div class="dash-shortcuts-head"><div><p class="club-kicker">A un toque</p><h2>Tu espacio de trabajo</h2></div><span>Continúa donde prefieras.</span></div>
-      <nav class="dash-quick" aria-label="Accesos rápidos">${ce}</nav>
+      <nav class="dash-quick" aria-label="Accesos rápidos">${w}</nav>
     </section>
 
-    ${T}
+    ${ce}
 
     ${jv(e)}
 
-    ${le}
+    ${T}
 
     <div class="safety-note">${X(`help`)}<p><strong>Inventario local, no oferta comercial.</strong> Fechas, precios, acreditaciones y disponibilidad de cada curso se publicarán después de la fuente autorizada.</p></div>
   </section>`}function Nv(){let e=Ig(_v()),t=e.tab??`todos`,n=e.area??`todas`,r=Ng(Y,xv),i=Y.reduce((e,t)=>e+t.clases.filter(e=>mg(e.video)).length,0),a=Pg(Y),o=Mg(Y,xv,{...e,tab:t,area:n}),s=[{id:`todos`,label:`Todos`,count:r.totalCursos},{id:`marcha`,label:`En marcha`,count:r.enMarcha},{id:`completados`,label:`Completados`,count:r.completados},{id:`sin-empezar`,label:`Por explorar`,count:r.sinEmpezar}].map(r=>{let i=r.id===t,a=`#/club/cursos${Fg({...e,tab:r.id,area:n})}`;return`<a class="catalog-tab${i?` is-active`:``}" href="${a}"${i?` aria-current="page"`:``}>${Z(r.label)}<span>${r.count}</span></a>`}).join(``),c=[`todas`,...a].map(r=>{let i=r===n,a=r===`todas`?`Todas las áreas`:r,o=`#/club/cursos${Fg({...e,area:r,tab:t})}`;return`<a class="catalog-chip${i?` is-active`:``}" href="${o}"${i?` aria-current="page"`:``}>${Z(a)}</a>`}).join(``),l=o.map(e=>Tv(e,Y.findIndex(t=>t.id===e.id))).join(``),u=t===`marcha`?`Ningún curso en marcha. Empieza una clase para que aparezca aquí.`:t===`completados`?`Aún no completas ningún curso. Termina todas las clases de uno para marcarlo.`:t===`sin-empezar`?`¡Todos los cursos tienen avance! No queda ninguno por explorar.`:`Prueba con otra área o palabra.`,d=e.q?Z(e.q):``,f=e.q||n!==`todas`||t!==`todos`?`<a class="catalog-clear" href="#/club/cursos">${X(`help`)} Limpiar filtros</a>`:``;return`<section class="club-page">
@@ -357,7 +357,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         <h1>${Z(t.titulo)}</h1>
         <div class="course-overview__footer">
           <div class="course-overview__teacher"><span>${Z(t.instructor.split(/\s+/).map(e=>e[0]).slice(0,2).join(``))}</span><div><small>Ponente en fuente histórica</small><strong>${Z(t.instructor)}</strong></div></div>
-          <a class="club-button club-button--light" href="#/club/curso/${t.id}/clase/${a.n}">${i?r.percentage?`Continuar curso`:`Ver primera clase`:`Explorar primera clase`} ${X(`arrow`)}</a>
+          <a class="club-button club-button--light" href="#/club/curso/${t.id}/clase/${a.n}">${i?r.percentage?`Continuar curso`:`Ver primera clase`:`Explorar primera clase`}</a>
         </div>
       </div>
     </article>
@@ -371,12 +371,12 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         <h2>${i?r.percentage?`Sigue avanzando`:`Tu ruta comienza aquí`:`Explora el programa`}</h2>
         <p>${r.completed.length} de ${r.total} clases marcadas en este dispositivo. Las nuevas marcas requieren video.</p>
         <div class="course-progress"><span style="width:${r.percentage}%"></span></div>
-        <a class="club-button" href="#/club/curso/${t.id}/clase/${a.n}">${i&&r.percentage?`Continuar por la clase `+a.n:`Ver clase `+a.n} ${X(`arrow`)}</a>
+        <a class="club-button" href="#/club/curso/${t.id}/clase/${a.n}">${i&&r.percentage?`Continuar por la clase `+a.n:`Ver clase `+a.n}</a>
         <ul><li>${X(`library`)} Temario organizado por lección</li><li>${X(`clock`)} Avance guardado localmente</li><li>${X(`help`)} Sin certificado vigente</li></ul>
         <small>Los videos sólo aparecerán al importar enlaces autorizados por GlobalVet.</small>
       </aside>
     </div>
-    <section class="course-related"><div class="club-section__head"><div><p class="club-kicker">Sigue aprendiendo</p><h2>Otros cursos</h2></div><a href="#/club/cursos">Ver catálogo ${X(`arrow`)}</a></div><div class="course-grid">${s.map(e=>Tv(e,Y.indexOf(e))).join(``)}</div></section>
+    <section class="course-related"><div class="club-section__head"><div><p class="club-kicker">Sigue aprendiendo</p><h2>Otros cursos</h2></div><a href="#/club/cursos">Ver catálogo</a></div><div class="course-grid">${s.map(e=>Tv(e,Y.indexOf(e))).join(``)}</div></section>
   </section>`}function Fv(e,t){let n=Y.find(t=>t.id===e);if(!n)return Iv(`Curso no encontrado`,`Esta ruta no forma parte del inventario actual.`,`courses`);let r=xv(n),i=n.clases.find(e=>e.n===t)||n.clases[0];if(!i)return Iv(`Curso sin clases`,`Esta ruta todavía no tiene contenido inventariado.`,`courses`);let a=n.clases.indexOf(i),o=n.clases[a-1],s=n.clases[a+1],c=mg(s?.video),l=r.completed.includes(i.n),u=mg(i.video),d=l?`<button class="club-button club-button--outline" type="button" data-lesson-toggle="${n.id}" data-lesson-number="${i.n}">${X(`check`)} Quitar marca local</button>`:u?`<button class="club-button" type="button" data-lesson-toggle="${n.id}" data-lesson-number="${i.n}">Marcar como completada</button>`:`<button class="club-button club-button--outline" type="button" disabled title="Esta clase aún no tiene video autorizado">Video pendiente</button>`,f=`${n.id}:${i.n}`,p=``;try{p=JSON.parse(localStorage.getItem(`globalvet:class-notes:v1`)||`{}`)[f]||``}catch{}let m=n.clases.map(e=>{let t=r.completed.includes(e.n),a=e.n===i.n;return`<a class="classroom-lesson${t?` is-complete`:``}${a?` is-active`:``}" href="#/club/curso/${n.id}/clase/${e.n}" ${a?`aria-current="page"`:``}><span class="classroom-lesson__state">${t?X(`check`):String(e.n).padStart(2,`0`)}</span><span class="classroom-lesson__copy"><strong>${Z(e.titulo)}</strong><small>${mg(e.video)?`Video incorporado`:`Video pendiente`}</small></span>${X(a?`play`:`chevron`)}</a>`}).join(``);return`<section class="club-page course-classroom">
     <a class="back-link" href="#/club/curso/${n.id}">← ${Z(n.titulo)}</a>
     <div class="classroom-layout">
@@ -388,7 +388,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         <div class="classroom-actions">
           ${o?`<a class="club-button club-button--outline" href="#/club/curso/${n.id}/clase/${o.n}">← Anterior</a>`:`<span></span>`}
           ${d}
-          ${s?`<a class="club-button" href="#/club/curso/${n.id}/clase/${s.n}">Siguiente ${X(`arrow`)}</a>`:`<a class="club-button" href="#/club/curso/${n.id}">Ver progreso ${X(`arrow`)}</a>`}
+          ${s?`<a class="club-button" href="#/club/curso/${n.id}/clase/${s.n}">Siguiente</a>`:`<a class="club-button" href="#/club/curso/${n.id}">Ver progreso</a>`}
         </div>
         ${s?`<a class="classroom-upnext" href="#/club/curso/${n.id}/clase/${s.n}"><span class="classroom-upnext__thumb">${n.imagen?`<img src="${n.imagen}" alt="">`:X(c?`play`:`clock`)}<i>${X(c?`play`:`clock`)}</i></span><span><small>A continuación · clase ${s.n}</small><strong>${Z(s.titulo)}</strong><em>${c?`Video incorporado`:`Video pendiente`}</em></span>${X(`arrow`)}</a>`:`<div class="classroom-upnext is-finish"><span>${X(`award`)}</span><span><small>Última clase del temario</small><strong>${u?`Revisa el video para cerrar la ruta.`:`El video de esta clase sigue pendiente.`}</strong></span></div>`}
       </div>
@@ -419,7 +419,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
       <p class="book__author">${Z(e.autor)}</p>
       <p class="book__desc">${Z(e.descripcion)}</p>
       <div class="book__actions">
-        <a class="club-button" href="#/club/materiales/${e.id}">${r} ${X(`arrow`)}</a>
+        <a class="club-button" href="#/club/materiales/${e.id}">${r}</a>
       </div>
     </div>
   </article>`}function Gv(){let e=R.read(),t=_v(),n=new URLSearchParams(t.startsWith(`?`)?t.slice(1):t),r=n.get(`tipo`)||`todo`,i=(n.get(`q`)||``).trim(),a=[...new Set(pl.map(e=>e.tipo))],o=pl.filter(e=>{if(!i)return!0;let t=bv(i);return bv(`${e.titulo} ${e.area} ${e.categoria} ${e.autor}`).includes(t)}),s=o.filter(t=>r===`todo`||r===`guardados`&&e.favoriteMaterials.includes(t.id)||t.tipo===r),c=(e,t=i)=>{let n={};e&&e!==`todo`&&(n.tipo=e),t&&(n.q=t);let r=new URLSearchParams(n).toString();return r?`?${r}`:``},l=(e,t,n)=>`<a class="chip${r===e?` chip--primary`:` chip--outline`}" href="#/club/materiales${c(e)}"${r===e?` aria-current="page"`:``}>${Z(t)} <small>${n}</small></a>`,u=[l(`todo`,`Todo`,o.length),l(`guardados`,`Guardados`,o.filter(t=>e.favoriteMaterials.includes(t.id)).length),...a.map(e=>l(e,e,o.filter(t=>t.tipo===e).length))].join(``),d=s.filter(e=>e.estado===`disponible`),f=s.filter(e=>e.estado===`proximamente`),p=d[0]??f[0],m=d.filter(e=>e.id!==p?.id).map(Uv).join(``),h=f.filter(e=>e.id!==p?.id).map(Uv).join(``),g=i?`<p class="catalog-active-query">Resultados para <strong>“${Z(i)}”</strong> · <a href="#/club/materiales${c(r,``)}">limpiar</a></p>`:``;return`<section class="club-page stack library-page">
@@ -452,7 +452,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
     `}
 
     <p class="library-footnote">${X(`help`)} Los recursos clínicos permanecen bloqueados hasta completar su revisión profesional.</p>
-  </section>`}function Kv(e){let t=pl.find(t=>t.id===e);if(!t)return Iv(`Material no encontrado`,`Esta pieza no forma parte de la biblioteca actual.`,`help`,`<a class="club-button" href="#/club/materiales">Ver biblioteca</a>`);let n=R.read().favoriteMaterials.includes(t.id),r=t.estado===`proximamente`,i=zv(t.id,t.paginas),a=!r&&t.gratis?` · Acceso gratuito`:``,o=pl.filter(e=>e.id!==t.id&&(e.area===t.area||e.categoria===t.categoria)).slice(0,6).map(Uv).join(``),s=`#/club/materiales/${t.id}/visor${i>1?`?pagina=${i}`:``}`,c=r?`<button class="club-button is-disabled" type="button" disabled>Próximamente</button>`:`<a class="club-button book__primary-action" href="${s}">${i>1?`Continuar en página ${i}`:`Abrir material`} ${X(`arrow`)}</a>`,l=r?``:`<a class="material-mobile-read" href="${s}"><span>${X(`book-open`)}</span><div><strong>${i>1?`Continuar en página ${i}`:`Abrir y empezar a leer`}</strong><small>Documento completo · ${t.paginas} ${t.paginas===1?`página`:`páginas`}</small></div>${X(`arrow`)}</a>`,u=t.notaEstado?`<div class="book__note">${X(`help`)}<div><strong>Estado:</strong> ${Z(t.notaEstado)}</div></div>`:``;return`<section class="club-page stack material-detail-page">
+  </section>`}function Kv(e){let t=pl.find(t=>t.id===e);if(!t)return Iv(`Material no encontrado`,`Esta pieza no forma parte de la biblioteca actual.`,`help`,`<a class="club-button" href="#/club/materiales">Ver biblioteca</a>`);let n=R.read().favoriteMaterials.includes(t.id),r=t.estado===`proximamente`,i=zv(t.id,t.paginas),a=!r&&t.gratis?` · Acceso gratuito`:``,o=pl.filter(e=>e.id!==t.id&&(e.area===t.area||e.categoria===t.categoria)).slice(0,6).map(Uv).join(``),s=`#/club/materiales/${t.id}/visor${i>1?`?pagina=${i}`:``}`,c=r?`<button class="club-button is-disabled" type="button" disabled>Próximamente</button>`:`<a class="club-button book__primary-action" href="${s}">${i>1?`Continuar en página ${i}`:`Abrir material`}</a>`,l=r?``:`<a class="material-mobile-read" href="${s}"><span>${X(`book-open`)}</span><div><strong>${i>1?`Continuar en página ${i}`:`Abrir y empezar a leer`}</strong><small>Documento completo · ${t.paginas} ${t.paginas===1?`página`:`páginas`}</small></div>${X(`arrow`)}</a>`,u=t.notaEstado?`<div class="book__note">${X(`help`)}<div><strong>Estado:</strong> ${Z(t.notaEstado)}</div></div>`:``;return`<section class="club-page stack material-detail-page">
     <a class="back-link" href="#/club/materiales">${X(`arrow`)} Biblioteca</a>
 
     <article class="book book--detail material-detail-card">
@@ -540,12 +540,12 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         <span class="ig-promo__shade" aria-hidden="true"></span>
         <span class="ig-promo__content">
           <img class="ig-promo__logo" src="/brand/globalvet-logo-oficial.jpg" alt="GlobalVet México">
-          <span class="ig-promo__copy"><small>${Z(l.eyebrow)}</small><strong>${Z(l.title)}</strong><span>${Z(l.cta)} ${X(`arrow`)}</span></span>
+          <span class="ig-promo__copy"><small>${Z(l.eyebrow)}</small><strong>${Z(l.title)}</strong><span>${Z(l.cta)}</span></span>
         </span>
       </a>`:u?`<a class="ig-post__media ig-post__media--photo" href="#/club/comunidad/${e.id}" aria-label="Abrir publicación: ${Z(e.titulo)}">
           <img class="ig-post__photo" src="${u}" alt="Imagen de la publicación: ${Z(e.titulo)}" loading="lazy">
         </a>`:`<a class="ig-post__text-cover" href="#/club/comunidad/${Z(e.id)}" aria-label="Abrir publicación: ${Z(e.titulo)}">
-          <span>${Z(Yv(e.categoria))}</span><strong>${Z(e.titulo)}</strong><small>Leer conversación ${X(`arrow`)}</small>
+          <span>${Z(Yv(e.categoria))}</span><strong>${Z(e.titulo)}</strong><small>Leer conversación</small>
         </a>`;return`<article class="ig-post" data-comm-post="${Z(e.id)}">
     <header class="ig-post__head">
       <a class="ig-post__user" href="#/club/comunidad/${e.id}">
@@ -622,7 +622,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         <span class="ig-empty__icon">${X(`chat`)}</span>
         <strong>${o?`No encontramos conversaciones con esa búsqueda`:a?`Aún no tienes publicaciones guardadas`:`Todavía no hay publicaciones en este tema`}</strong>
         <p>${o?`Prueba con otra palabra o revisa todos los temas.`:a?`Guarda una publicación del feed para encontrarla después en este navegador.`:`Explora otros temas o inicia una conversación local.`}</p>
-        <a class="club-button" href="#/club/comunidad${h({saved:void 0,cat:`todo`,q:void 0,compose:void 0})}">${a?`Volver al feed`:`Ver todos los temas`} ${X(`arrow`)}</a>
+        <a class="club-button" href="#/club/comunidad${h({saved:void 0,cat:`todo`,q:void 0,compose:void 0})}">${a?`Volver al feed`:`Ver todos los temas`}</a>
       </div>`:`<div class="ig-feed">${p.map(ny).join(``)}</div>`,ae=re.slice(0,4).map(e=>`<a class="ig-activity" href="#/club/comunidad/${e.id}">
     <span class="avatar-ring avatar-ring--sm" style="--av-tint:${Zv(e.autor)}" aria-hidden="true">${Z(e_(e.autor))}</span>
     <span class="ig-activity__txt"><strong>${Z($v(e.autor))}</strong><small>${Z(e.rolAutor||Yv(e.categoria))}</small></span>
@@ -722,10 +722,10 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
       <label>Mensaje<textarea name="texto" maxlength="1500" rows="4" placeholder="Comparte tu experiencia o perspectiva clínica. Las respuestas no sustituyen una consulta profesional." required></textarea></label>
       <footer>
         <small>Firmarás como <strong>${Z(R.read().profileName)}</strong>.</small>
-        <button class="club-button" type="submit">${X(`arrow`)} Enviar respuesta</button>
+        <button class="club-button" type="submit">Enviar respuesta</button>
       </footer>
     </form>
-  </section>`}function ay(){return`<section class="club-page"><div class="club-page__head"><div><p class="club-kicker">Apoyo profesional</p><h1>Herramientas claras y seguras.</h1><p>Usa ahora la ficha local. El resto muestra su estado real y no publica recomendaciones sin validación.</p></div><a class="club-button" href="#/club/herramientas/ficha">Crear ficha ${X(`arrow`)}</a></div><div class="tools-grid"><article class="is-ready"><span>${X(`stethoscope`)}</span><div><small>Disponible · local e imprimible</small><h2>Ficha de paciente</h2><p>Registra una consulta sin enviar datos personales al servidor.</p></div><a href="#/club/herramientas/ficha">Abrir herramienta ${X(`arrow`)}</a></article><article><span>${X(`chart`)}</span><div><small>En revisión</small><h2>Condición corporal</h2><p>Escalas históricas pendientes de fuentes y aprobación profesional.</p></div><span>Próximamente</span></article><article><span>${X(`syringe`)}</span><div><small>En revisión</small><h2>Vacunación</h2><p>Requiere confirmar jurisdicción, especie y fecha de revisión.</p></div><span>Próximamente</span></article><article><span>${X(`siren`)}</span><div><small>Seguridad clínica</small><h2>Guía de urgencias</h2><p>Los protocolos históricos necesitan revisión profesional responsable.</p></div><span>Próximamente</span></article></div></section>`}function oy(){return`<section class="club-page"><a class="back-link" href="#/club/herramientas">← Volver a herramientas</a><div class="club-page__head"><div><p class="club-kicker">Guardado sólo en este dispositivo</p><h1>Ficha de paciente</h1><p>Esta herramienta funciona localmente. No envía nombres, teléfonos, diagnósticos ni datos del paciente a GlobalVet.</p></div></div><form class="patient-form" data-patient-form><section><h2>Paciente</h2><div class="form-grid"><label>Nombre<input name="nombre" maxlength="80" required></label><label>Especie<select name="especie"><option>Canino</option><option>Felino</option><option>Ave</option><option>Reptil</option><option>Otro</option></select></label><label>Raza<input name="raza" maxlength="80"></label><label>Edad<input name="edad" maxlength="40"></label><label>Peso (kg)<input name="peso" type="number" min="0" step="0.01"></label><label>Identificación<input name="identificacion" maxlength="80"></label></div></section><section><h2>Consulta</h2><div class="form-grid"><label class="form-wide">Motivo<textarea name="motivo" maxlength="1000" required></textarea></label><label class="form-wide">Hallazgos<textarea name="hallazgos" maxlength="1500"></textarea></label><label class="form-wide">Notas profesionales<textarea name="notas" maxlength="1500"></textarea></label></div></section><div class="patient-actions"><button class="club-button" type="submit">Guardar borrador local</button><button class="club-button club-button--outline" type="button" data-patient-print>Imprimir / guardar PDF</button><button type="button" data-patient-clear>Limpiar</button><span data-patient-status aria-live="polite"></span></div></form><div class="safety-note">${X(`help`)}<p><strong>Privacidad:</strong> evita usar equipos compartidos. El borrador queda en localStorage hasta que lo elimines.</p></div></section>`}function sy(){let e=R.read(),t=H.session,n=Object.values(e.completedLessons).reduce((e,t)=>e+t.length,0),r=e.profileName.split(/\s+/).filter(Boolean).slice(0,2).map(e=>e[0]?.toUpperCase()).join(``)||`GV`,i=t?`Cuenta de Google conectada${t.email?` · ${Z(t.email)}`:``}`:`Acceso demostrativo local`;return`<section class="club-page"><div class="profile-head"><div class="profile-avatar">${Z(r)}</div><div><p class="club-kicker">Perfil local editable</p><h1>${Z(e.profileName)}</h1><p>${i} · ${e.demoMembership?`membresía demo activa`:`sin membresía conectada`}</p></div><div class="profile-head__actions"><a class="club-button club-button--outline" href="#/club/membresia">Ver membresía</a><button class="club-button club-button--danger" type="button" data-demo-logout>${X(`logout`)} Cerrar sesión</button></div></div><form class="profile-editor" data-profile-form><label>Nombre visible en este dispositivo<input name="name" maxlength="60" value="${Z(e.profileName)}" aria-label="Nombre visible en este dispositivo" required></label><button class="club-button" type="submit">Guardar nombre</button></form><div class="profile-grid"><article><span>${X(`stats`)}</span><div><small>Actividad</small><strong>${n} clases revisadas</strong><p>El avance se conserva sólo en este navegador.</p></div></article><article><span>${X(`award`)}</span><div><small>Favoritos</small><strong>${e.favoriteMaterials.length} materiales</strong><p>Metadatos guardados, todavía sin archivos descargables.</p></div></article><article><span>${X(`chat`)}</span><div><small>Comunidad</small><strong>${e.posts.length} publicaciones locales</strong><p>No se comparten con otros miembros.</p></div></article></div><div class="profile-session-note">${X(`logout`)}<div><strong>${t?`Sesión de Google`:`Sesión demostrativa`}</strong><p>Al cerrar sesión conservaremos tu progreso local en este navegador. La membresía y los datos del Club aún no se sincronizan con Firebase.</p></div><button type="button" data-demo-logout>Cerrar sesión</button></div></section>`}function cy(){let e=R.read(),t=xg(e),n={},r={};for(let e of Y)n[e.id]=e.clases.length,r[e.id]=e.categoria;let i=Sg(e,n),a=Og(e,r),o=Cg(e),s=wg(o),c=Eg(e.activityDays??[]),l=Dg({lessons:t,completedCourses:i,xp:o,streakCurrent:c.currentDays,posts:e.posts.length,favoriteMaterials:e.favoriteMaterials.length,distinctCategories:a}),u=l.filter(e=>e.unlocked).length,d=l.find(e=>!e.unlocked&&e.progress>0),f=`<div class="level-bar"><div class="level-bar__fill" style="width:${Math.round(s.progress*100)}%"></div></div>`,p=s.xpForNext>0?`${s.xpInLevel}/${s.xpForNext} XP para subir`:`Nivel máximo alcanzado`,m=e=>`<span class="streak-dot${e?` is-on`:``}" aria-hidden="true"></span>`,h=new Set(e.activityDays??[]),g=new Date().setHours(0,0,0,0),_=Array.from({length:7},(e,t)=>{let n=new Date(g-(6-t)*864e5),r=`${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,`0`)}-${String(n.getDate()).padStart(2,`0`)}`;return m(h.has(r))}).join(``),v=l.map(e=>{let t=Math.round(e.progress*100);return`<article class="achievement${e.unlocked?` is-unlocked`:``}" data-ach="${Z(e.id)}">
+  </section>`}function ay(){return`<section class="club-page"><div class="club-page__head"><div><p class="club-kicker">Apoyo profesional</p><h1>Herramientas claras y seguras.</h1><p>Usa ahora la ficha local. El resto muestra su estado real y no publica recomendaciones sin validación.</p></div><a class="club-button" href="#/club/herramientas/ficha">Crear ficha</a></div><div class="tools-grid"><article class="is-ready"><span>${X(`stethoscope`)}</span><div><small>Disponible · local e imprimible</small><h2>Ficha de paciente</h2><p>Registra una consulta sin enviar datos personales al servidor.</p></div><a href="#/club/herramientas/ficha">Abrir herramienta</a></article><article><span>${X(`chart`)}</span><div><small>En revisión</small><h2>Condición corporal</h2><p>Escalas históricas pendientes de fuentes y aprobación profesional.</p></div><span>Próximamente</span></article><article><span>${X(`syringe`)}</span><div><small>En revisión</small><h2>Vacunación</h2><p>Requiere confirmar jurisdicción, especie y fecha de revisión.</p></div><span>Próximamente</span></article><article><span>${X(`siren`)}</span><div><small>Seguridad clínica</small><h2>Guía de urgencias</h2><p>Los protocolos históricos necesitan revisión profesional responsable.</p></div><span>Próximamente</span></article></div></section>`}function oy(){return`<section class="club-page"><a class="back-link" href="#/club/herramientas">← Volver a herramientas</a><div class="club-page__head"><div><p class="club-kicker">Guardado sólo en este dispositivo</p><h1>Ficha de paciente</h1><p>Esta herramienta funciona localmente. No envía nombres, teléfonos, diagnósticos ni datos del paciente a GlobalVet.</p></div></div><form class="patient-form" data-patient-form><section><h2>Paciente</h2><div class="form-grid"><label>Nombre<input name="nombre" maxlength="80" required></label><label>Especie<select name="especie"><option>Canino</option><option>Felino</option><option>Ave</option><option>Reptil</option><option>Otro</option></select></label><label>Raza<input name="raza" maxlength="80"></label><label>Edad<input name="edad" maxlength="40"></label><label>Peso (kg)<input name="peso" type="number" min="0" step="0.01"></label><label>Identificación<input name="identificacion" maxlength="80"></label></div></section><section><h2>Consulta</h2><div class="form-grid"><label class="form-wide">Motivo<textarea name="motivo" maxlength="1000" required></textarea></label><label class="form-wide">Hallazgos<textarea name="hallazgos" maxlength="1500"></textarea></label><label class="form-wide">Notas profesionales<textarea name="notas" maxlength="1500"></textarea></label></div></section><div class="patient-actions"><button class="club-button" type="submit">Guardar borrador local</button><button class="club-button club-button--outline" type="button" data-patient-print>Imprimir / guardar PDF</button><button type="button" data-patient-clear>Limpiar</button><span data-patient-status aria-live="polite"></span></div></form><div class="safety-note">${X(`help`)}<p><strong>Privacidad:</strong> evita usar equipos compartidos. El borrador queda en localStorage hasta que lo elimines.</p></div></section>`}function sy(){let e=R.read(),t=H.session,n=Object.values(e.completedLessons).reduce((e,t)=>e+t.length,0),r=e.profileName.split(/\s+/).filter(Boolean).slice(0,2).map(e=>e[0]?.toUpperCase()).join(``)||`GV`,i=t?`Cuenta de Google conectada${t.email?` · ${Z(t.email)}`:``}`:`Acceso demostrativo local`;return`<section class="club-page"><div class="profile-head"><div class="profile-avatar">${Z(r)}</div><div><p class="club-kicker">Perfil local editable</p><h1>${Z(e.profileName)}</h1><p>${i} · ${e.demoMembership?`membresía demo activa`:`sin membresía conectada`}</p></div><div class="profile-head__actions"><a class="club-button club-button--outline" href="#/club/membresia">Ver membresía</a><button class="club-button club-button--danger" type="button" data-demo-logout>${X(`logout`)} Cerrar sesión</button></div></div><form class="profile-editor" data-profile-form><label>Nombre visible en este dispositivo<input name="name" maxlength="60" value="${Z(e.profileName)}" aria-label="Nombre visible en este dispositivo" required></label><button class="club-button" type="submit">Guardar nombre</button></form><div class="profile-grid"><article><span>${X(`stats`)}</span><div><small>Actividad</small><strong>${n} clases revisadas</strong><p>El avance se conserva sólo en este navegador.</p></div></article><article><span>${X(`award`)}</span><div><small>Favoritos</small><strong>${e.favoriteMaterials.length} materiales</strong><p>Metadatos guardados, todavía sin archivos descargables.</p></div></article><article><span>${X(`chat`)}</span><div><small>Comunidad</small><strong>${e.posts.length} publicaciones locales</strong><p>No se comparten con otros miembros.</p></div></article></div><div class="profile-session-note">${X(`logout`)}<div><strong>${t?`Sesión de Google`:`Sesión demostrativa`}</strong><p>Al cerrar sesión conservaremos tu progreso local en este navegador. La membresía y los datos del Club aún no se sincronizan con Firebase.</p></div><button type="button" data-demo-logout>Cerrar sesión</button></div></section>`}function cy(){let e=R.read(),t=xg(e),n={},r={};for(let e of Y)n[e.id]=e.clases.length,r[e.id]=e.categoria;let i=Sg(e,n),a=Og(e,r),o=Cg(e),s=wg(o),c=Eg(e.activityDays??[]),l=Dg({lessons:t,completedCourses:i,xp:o,streakCurrent:c.currentDays,posts:e.posts.length,favoriteMaterials:e.favoriteMaterials.length,distinctCategories:a}),u=l.filter(e=>e.unlocked).length,d=l.find(e=>!e.unlocked&&e.progress>0),f=`<div class="level-bar"><div class="level-bar__fill" style="width:${Math.round(s.progress*100)}%"></div></div>`,p=s.xpForNext>0?`${s.xpInLevel}/${s.xpForNext} XP para subir`:`Nivel máximo alcanzado`,m=e=>`<span class="streak-dot${e?` is-on`:``}" aria-hidden="true"></span>`,h=new Set(e.activityDays??[]),g=new Date().setHours(0,0,0,0),_=Array.from({length:7},(e,t)=>{let n=new Date(g-(6-t)*864e5),r=`${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,`0`)}-${String(n.getDate()).padStart(2,`0`)}`;return m(h.has(r))}).join(``),v=l.map(e=>{let t=Math.round(e.progress*100);return`<article class="achievement${e.unlocked?` is-unlocked`:``}" data-ach="${Z(e.id)}">
       <span class="achievement__icon">${X(e.unlocked?e.icon:`help`)}</span>
       <div class="achievement__body">
         <small>${e.unlocked?`Desbloqueado`:`Progreso ${Math.min(e.goal,Math.round(e.progress*e.goal))}/${e.goal}`}</small>
@@ -862,7 +862,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
 
           <div class="auth-mobile-value" aria-label="Qué incluye tu acceso">${t===`api`?`<span>Cuenta segura</span><span>Progreso conectado</span><span>Catálogo aprobado</span>`:`<span>13 cursos</span><span>12 materiales</span><span>Retos y comunidad</span>`}</div>
 
-          ${r?`<a class="auth-continue" href="#${Py(a)}">Continuar al Club <span>→</span></a><div class="auth-divider"><span>o cambia tu acceso</span></div>`:``}
+          ${r?`<a class="auth-continue" href="#${Py(a)}">Continuar al Club</a><div class="auth-divider"><span>o cambia tu acceso</span></div>`:``}
 
           <button class="auth-google ${i?`is-ready`:``}" type="button" data-google-login aria-describedby="google-auth-state">
             <span>${Ly}</span><strong>${H.session?`Cambiar cuenta de Google`:`Continuar con Google`}</strong>${i?`<em>Disponible</em>`:`<em>Sin configurar</em>`}
@@ -882,7 +882,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
             </label>
             <div class="auth-credentials"><span>Acceso de prueba</span><code>${Sl}</code><code>${Cl}</code></div>
             <p class="auth-error" data-auth-error role="alert" aria-live="polite"></p>
-            <button class="auth-submit" type="submit">Entrar a GlobalVet Club <span>→</span></button>
+            <button class="auth-submit" type="submit">Entrar a GlobalVet Club</button>
           </form>`:``}
 
           <div class="auth-safety"><span>✓</span><p><strong>${t===`api`?`Modo API protegido`:i?`Identidad protegida`:`Demostración segura`}</strong> ${t===`api`?`Tu perfil y las aperturas de clase se consultarán al servidor. Si no está disponible, no se mostrarán datos locales como respaldo.`:i?`Google administra el acceso. El contenido y progreso del Club continúan en modo local mientras se conecta la API.`:`No se envían ni almacenan contraseñas reales. Usa únicamente la clave demo mostrada arriba.`}</p></div>
@@ -915,7 +915,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         <nav class="landing-nav" aria-label="Navegación principal">
           <a href="#que-incluye">Qué incluye</a><a href="#cursos">Cursos</a><a href="#recursos">Recursos</a><a href="#preguntas">Preguntas</a>
         </nav>
-        <a class="landing-header__cta" href="#/login">Iniciar sesión ${$(`arrow`)}</a>
+        <a class="landing-header__cta" href="#/login">Iniciar sesión</a>
       </header>
 
       <main id="contenido">
@@ -928,7 +928,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
             <h1>Crece con cada caso. <em>Avanza con criterio.</em></h1>
             <p>Una experiencia clara para explorar conocimiento, organizar tu aprendizaje y acompañar la práctica profesional.</p>
             <div class="landing-hero__actions">
-              <a class="landing-button landing-button--light" href="#/club">Explorar el club ${$(`arrow`)}</a>
+              <a class="landing-button landing-button--light" href="#/club">Explorar el club</a>
               <a class="landing-button landing-button--glass" href="#cursos">Ver áreas de aprendizaje</a>
             </div>
           </div>
@@ -953,7 +953,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
               <li><span>${$(`community`)}</span><div><strong>Comunidad profesional</strong><small>Un espacio modular preparado para intercambio y seguimiento.</small></div></li>
               <li><span>${$(`tool`)}</span><div><strong>Apoyo para la práctica</strong><small>Herramientas diferenciadas del criterio y diagnóstico veterinario.</small></div></li>
             </ul>
-            <a class="landing-button landing-button--purple" href="#/club">Recorrer el interior ${$(`arrow`)}</a>
+            <a class="landing-button landing-button--purple" href="#/club">Recorrer el interior</a>
           </div>
           <div class="landing-product" aria-label="Vista previa del interior de GlobalVet Club">
             <div class="landing-product__bar"><i></i><i></i><i></i><span>GlobalVet Club · espacio profesional</span></div>
@@ -971,7 +971,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         <section class="landing-section landing-experience" id="experiencia">
           <div class="landing-pathway__head">
             <div><p class="landing-kicker">Una ruta a tu medida</p><h2>Encuentra el área que necesitas <em>hoy.</em></h2><p>Explora por disciplina y pasa del interés a una ruta concreta, sin perderte entre menús o contenidos sueltos.</p></div>
-            <aside aria-label="Resumen del catálogo"><span>${$(`course`)}</span><div><strong>Tu mapa de aprendizaje</strong><small>Todo conectado para que el siguiente paso siempre sea claro.</small></div><dl><div><dt>13</dt><dd>cursos</dd></div><div><dt>12</dt><dd>materiales</dd></div><div><dt>6</dt><dd>áreas</dd></div></dl><a href="#/club/cursos">Ver catálogo ${$(`arrow`)}</a></aside>
+            <aside aria-label="Resumen del catálogo"><span>${$(`course`)}</span><div><strong>Tu mapa de aprendizaje</strong><small>Todo conectado para que el siguiente paso siempre sea claro.</small></div><dl><div><dt>13</dt><dd>cursos</dd></div><div><dt>12</dt><dd>materiales</dd></div><div><dt>6</dt><dd>áreas</dd></div></dl><a href="#/club/cursos">Ver catálogo</a></aside>
           </div>
           <div class="landing-categories">
             <a href="#/club/cursos"><span class="landing-category__icon">${$(`shield`)}</span><div><strong>Medicina interna</strong><small>Casos y fundamentos</small></div><b>${$(`arrow`)}</b></a>
@@ -994,19 +994,19 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         </section>
 
         <section class="landing-section" id="cursos">
-          <div class="landing-heading landing-heading--row"><div><p class="landing-kicker">Explora el catálogo</p><h2>Rutas que comienzan con una pregunta clínica.</h2></div><a href="#/club/cursos">Ver los 13 cursos ${$(`arrow`)}</a></div>
+          <div class="landing-heading landing-heading--row"><div><p class="landing-kicker">Explora el catálogo</p><h2>Rutas que comienzan con una pregunta clínica.</h2></div><a href="#/club/cursos">Ver los 13 cursos</a></div>
           <div class="landing-course-grid">${Gy()}</div>
         </section>
 
         <section class="landing-story" id="comunidad">
-          <div class="landing-story__copy"><span class="landing-story__icon">${$(`community`)}</span><p class="landing-kicker">Entre colegas</p><h2>Aprender también es compartir lo que pasa en consulta.</h2><p>Un espacio visual para descubrir publicaciones, guardar ideas y seguir conversaciones útiles entre profesionales.</p><div class="landing-story__proof"><span>Publicaciones</span><span>Casos</span><span>Conversaciones</span></div><a class="landing-button landing-button--purple" href="#/club/comunidad">Entrar a la comunidad ${$(`arrow`)}</a></div>
+          <div class="landing-story__copy"><span class="landing-story__icon">${$(`community`)}</span><p class="landing-kicker">Entre colegas</p><h2>Aprender también es compartir lo que pasa en consulta.</h2><p>Un espacio visual para descubrir publicaciones, guardar ideas y seguir conversaciones útiles entre profesionales.</p><div class="landing-story__proof"><span>Publicaciones</span><span>Casos</span><span>Conversaciones</span></div><a class="landing-button landing-button--purple" href="#/club/comunidad">Entrar a la comunidad</a></div>
           <div class="landing-story__gallery" aria-hidden="true"><img class="landing-story__poster" src="/comunidad/promos/teccapital-comunidad-v1.jpg" alt="" loading="lazy"><div class="landing-story__mini landing-story__mini--one"><img src="/media/curso-rehabilitacion-v1.png" alt="" loading="lazy"><span>${$(`heart`)} Guardado</span></div><div class="landing-story__mini landing-story__mini--two"><img src="/media/curso-no-convencionales-v1.png" alt="" loading="lazy"><span>Comunidad GlobalVet</span></div></div>
         </section>
 
         <section class="landing-section" id="recursos">
           <div class="landing-heading landing-heading--row"><div><p class="landing-kicker">Más que clases</p><h2>Recursos listos para acompañar tu día.</h2></div><p class="landing-heading__aside">Consulta formatos, organiza tu progreso y encuentra herramientas sin salir de tu recorrido.</p></div>
           <div class="landing-resources">
-            <a class="landing-resource-feature" href="#/club/materiales"><img src="/materiales/portadas/historia-clinica-pequenas-especies.webp" alt="Portada de historia clínica para pequeñas especies" loading="lazy"><div><span>${$(`library`)}</span><small>Biblioteca profesional</small><strong>Materiales que puedes consultar cuando los necesitas.</strong><em>Explorar biblioteca ${$(`arrow`)}</em></div></a>
+            <a class="landing-resource-feature" href="#/club/materiales"><img src="/materiales/portadas/historia-clinica-pequenas-especies.webp" alt="Portada de historia clínica para pequeñas especies" loading="lazy"><div><span>${$(`library`)}</span><small>Biblioteca profesional</small><strong>Materiales que puedes consultar cuando los necesitas.</strong><em>Explorar biblioteca</em></div></a>
             <div class="landing-resource-list">
               <a href="#/club/herramientas"><span>${$(`tool`)}</span><div><strong>Herramientas clínicas</strong><small>Apoyos organizados para la práctica.</small></div><b>${$(`arrow`)}</b></a>
               <a href="#/club/retos"><span>${$(`award`)}</span><div><strong>Retos de aprendizaje</strong><small>Sesiones breves para poner a prueba tu criterio.</small></div><b>${$(`arrow`)}</b></a>
@@ -1016,7 +1016,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         </section>
 
         <section class="landing-faq" id="preguntas">
-          <div class="landing-faq__intro"><p class="landing-kicker">Preguntas frecuentes</p><h2>Lo importante, explicado con claridad.</h2><p>Esta versión demostrativa muestra la experiencia y sus límites actuales sin inventar condiciones comerciales.</p><a class="landing-button landing-button--purple" href="#/club">Explorar el club ${$(`arrow`)}</a></div>
+          <div class="landing-faq__intro"><p class="landing-kicker">Preguntas frecuentes</p><h2>Lo importante, explicado con claridad.</h2><p>Esta versión demostrativa muestra la experiencia y sus límites actuales sin inventar condiciones comerciales.</p><a class="landing-button landing-button--purple" href="#/club">Explorar el club</a></div>
           <div class="landing-faq__list">
             <details><summary>¿Qué es GlobalVet Club?<span>+</span></summary><p>Es la base independiente de una plataforma de educación continua veterinaria con catálogo, materiales, comunidad, progreso y herramientas organizadas por módulos.</p></details>
             <details><summary>¿Los cursos que aparecen ya están publicados?<span>+</span></summary><p>No necesariamente. En esta demostración aparecen como inventariados o pendientes de validación; el modo conectado sólo debe publicar contenido aprobado.</p></details>
@@ -1026,12 +1026,12 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         </section>
 
         <section class="landing-cta-grid">
-          <article class="landing-cta-card landing-cta-card--photo"><img src="/media/curso-bioquimica-v1.png" alt="" loading="lazy"><div><p class="landing-kicker">Tu siguiente paso</p><h2>Todo tu aprendizaje veterinario, en un solo recorrido.</h2><p>Entra al club y descubre cómo se conectan cursos, materiales, comunidad y práctica.</p><a class="landing-button landing-button--light" href="#/club">Abrir GlobalVet Club ${$(`arrow`)}</a></div></article>
+          <article class="landing-cta-card landing-cta-card--photo"><img src="/media/curso-bioquimica-v1.png" alt="" loading="lazy"><div><p class="landing-kicker">Tu siguiente paso</p><h2>Todo tu aprendizaje veterinario, en un solo recorrido.</h2><p>Entra al club y descubre cómo se conectan cursos, materiales, comunidad y práctica.</p><a class="landing-button landing-button--light" href="#/club">Abrir GlobalVet Club</a></div></article>
           <article class="landing-cta-card landing-cta-card--plum"><span>${Hy}</span><div><p class="landing-kicker">GlobalVet Club</p><h2>Conocimiento que se queda contigo.</h2><ul><li>${$(`shield`)} Contenido organizado</li><li>${$(`library`)} Recursos conectados</li><li>${$(`community`)} Comunidad profesional</li></ul></div></article>
         </section>
 
         <section class="landing-status ${r.kind===`error`?`landing-status--error`:``}" id="estado">
-          <div><span></span><strong>${r.kind===`error`?`Conexión no validada`:`Demostración verificable`}</strong></div><p>${a}</p><a href="#/club">Entrar al club ${$(`arrow`)}</a>
+          <div><span></span><strong>${r.kind===`error`?`Conexión no validada`:`Demostración verificable`}</strong></div><p>${a}</p><a href="#/club">Entrar al club</a>
         </section>
       </main>
 
@@ -1045,7 +1045,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
           <div><strong>Explora</strong><a href="#cursos">Cursos</a><a href="#experiencia">Áreas</a><a href="#recursos">Recursos</a></div>
           <div><strong>Tu club</strong><a href="#/club/materiales">Materiales</a><a href="#/club/comunidad">Comunidad</a><a href="#/club/retos">Retos</a></div>
         </nav>
-        <div class="landing-footer__access"><span>${$(`shield`)}</span><div><strong>Experiencia demostrativa segura</strong><small>${H.configured?`Identidad Google disponible · sin cobros ni membresía conectada.`:`Explora la propuesta sin cobros ni conexiones externas.`}</small></div><a href="#/club">Entrar al club ${$(`arrow`)}</a></div>
+        <div class="landing-footer__access"><span>${$(`shield`)}</span><div><strong>Experiencia demostrativa segura</strong><small>${H.configured?`Identidad Google disponible · sin cobros ni membresía conectada.`:`Explora la propuesta sin cobros ni conexiones externas.`}</small></div><a href="#/club">Entrar al club</a></div>
         <div class="landing-footer__bottom"><small>GlobalVet Club · 2026</small><small>Contenido sujeto a revisión editorial</small><a href="#inicio">Volver arriba ↑</a></div>
       </footer>
       <div id="assistant-root"></div>
