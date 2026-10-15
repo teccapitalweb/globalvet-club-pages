@@ -1,7 +1,7 @@
 {
   "sourceRepository": "teccapitalweb/globalvet-club-unificado",
-  "sourceCommit": "e2e7c739b014aaf09eb98b5579feb612d083ade1",
-  "deployedAt": "2026-10-15T14:20:37Z",
+  "sourceCommit": "8aeec318cdd6522d37b5a148925100058b00056f",
+  "deployedAt": "2026-10-15T14:54:06Z",
   "mode": "demo-with-google-auth",
   "integrations": {
     "firebaseGoogle": true,
