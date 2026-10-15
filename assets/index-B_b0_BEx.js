@@ -1181,7 +1181,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
     <circle cx="29" cy="18" r="6" fill="currentColor" />
     <circle cx="43" cy="20" r="6" fill="currentColor" />
     <circle cx="50" cy="33" r="6" fill="currentColor" />
-  </svg>`,LS=[{slug:`bioquimica-clinica`,title:`Bioquímica clínica`,area:`Medicina interna`,image:`/media/curso-bioquimica-v1.png`},{slug:`dermatologia-veterinaria`,title:`Dermatología veterinaria`,area:`Dermatología`,image:`/media/curso-dermatologia-v1.png`},{slug:`fisioterapia-rehabilitacion`,title:`Fisioterapia y rehabilitación`,area:`Rehabilitación`,image:`/media/curso-rehabilitacion-v1.png`},{slug:`medicina-no-convencionales`,title:`Animales no convencionales`,area:`Especies exóticas`,image:`/media/curso-no-convencionales-v1.png`}];function $(e){let t={course:`<path d="m3 8 9-4 9 4-9 4-9-4Z"/><path d="M7 10.5V15c3 2 7 2 10 0v-4.5"/><path d="M21 8v7"/>`,library:`<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22.5Z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5a2.5 2.5 0 0 1 2.5 2.5Z"/>`,community:`<path d="M7 18.5c-2.6-1.2-4-3.3-4-6C3 7.8 6.8 5 12 5s9 2.8 9 7.5-3.8 7.5-9 7.5c-1.2 0-2.3-.2-3.3-.5L4 21Z"/>`,tool:`<path d="M14.7 6.3a4 4 0 0 0-5-5L12 3.6 9.6 6 7.3 3.7a4 4 0 0 0 5 5L19 15.4a2.5 2.5 0 1 1-3.6 3.6l-6.7-6.7"/>`,heart:`<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>`,award:`<circle cx="12" cy="8" r="5"/><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"/>`,arrow:`<path d="M5 12h14M14 7l5 5-5 5"/>`,shield:`<path d="M12 3 4.5 6v5.5c0 4.7 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.8 7.5-9.5V6Z"/><path d="m9 12 2 2 4-4"/>`,spark:`<path d="m12 3 1.5 4.4L18 9l-4.5 1.6L12 15l-1.5-4.4L6 9l4.5-1.6Z"/><path d="m19 15 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8Z"/>`,pulse:`<path d="M3 12h4l2-6 4 12 2-6h6"/>`,motion:`<path d="M5 17c3-1 4-4 5-7 1.2-3.4 3.4-5 7-4"/><path d="m14 3 3 3-3 3"/><path d="M5 21h14"/>`,leaf:`<path d="M20 4C12 4 6 8 5 16c5 1 10-1 13-5"/><path d="M5 20c1-5 5-9 11-12"/>`,paw:`<circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><circle cx="5" cy="13" r="2"/><circle cx="19" cy="13" r="2"/><path d="M8 18c0-3 1.8-5 4-5s4 2 4 5c0 2-1.5 3-4 3s-4-1-4-3Z"/>`};return`<svg viewBox="0 0 24 24" aria-hidden="true">${t[e]||t.heart}</svg>`}function RS(e){PS.innerHTML=`<main class="config-error" id="contenido"><span class="landing-kicker">Configuración protegida</span><h1>GlobalVet no inició en un modo ambiguo.</h1><p>${e}</p><code>Revisa apps/web/.env.example</code></main>`}function zS(){return LS.map((e,t)=>`
+  </svg>`,LS=[{slug:`bioquimica-clinica`,title:`Bioquímica clínica`,area:`Medicina interna`,image:`/media/curso-bioquimica-v1.png`},{slug:`dermatologia-veterinaria`,title:`Dermatología veterinaria`,area:`Dermatología`,image:`/media/curso-dermatologia-v1.png`},{slug:`fisioterapia-rehabilitacion`,title:`Fisioterapia y rehabilitación`,area:`Rehabilitación`,image:`/media/curso-rehabilitacion-v1.png`},{slug:`medicina-no-convencionales`,title:`Animales no convencionales`,area:`Especies exóticas`,image:`/media/curso-no-convencionales-v1.png`}];function $(e){let t={course:`<path d="m3 8 9-4 9 4-9 4-9-4Z"/><path d="M7 10.5V15c3 2 7 2 10 0v-4.5"/><path d="M21 8v7"/>`,library:`<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22.5Z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5a2.5 2.5 0 0 1 2.5 2.5Z"/>`,community:`<path d="M7 18.5c-2.6-1.2-4-3.3-4-6C3 7.8 6.8 5 12 5s9 2.8 9 7.5-3.8 7.5-9 7.5c-1.2 0-2.3-.2-3.3-.5L4 21Z"/>`,tool:`<path d="M14.7 6.3a4 4 0 0 0-5-5L12 3.6 9.6 6 7.3 3.7a4 4 0 0 0 5 5L19 15.4a2.5 2.5 0 1 1-3.6 3.6l-6.7-6.7"/>`,heart:`<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>`,award:`<circle cx="12" cy="8" r="5"/><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"/>`,arrow:`<path d="M5 12h14M14 7l5 5-5 5"/>`,shield:`<path d="M12 3 4.5 6v5.5c0 4.7 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.8 7.5-9.5V6Z"/><path d="m9 12 2 2 4-4"/>`,spark:`<path d="m12 3 1.5 4.4L18 9l-4.5 1.6L12 15l-1.5-4.4L6 9l4.5-1.6Z"/><path d="m19 15 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8Z"/>`,pulse:`<path d="M3 12h4l2-6 4 12 2-6h6"/>`,motion:`<path d="M5 17c3-1 4-4 5-7 1.2-3.4 3.4-5 7-4"/><path d="m14 3 3 3-3 3"/><path d="M5 21h14"/>`,leaf:`<path d="M20 4C12 4 6 8 5 16c5 1 10-1 13-5"/><path d="M5 20c1-5 5-9 11-12"/>`,paw:`<circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><circle cx="5" cy="13" r="2"/><circle cx="19" cy="13" r="2"/><path d="M8 18c0-3 1.8-5 4-5s4 2 4 5c0 2-1.5 3-4 3s-4-1-4-3Z"/>`,play:`<path d="m7 5 11 7-11 7Z"/>`,download:`<path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19h16"/>`,check:`<path d="m5 12 4 4L19 6"/>`};return`<svg viewBox="0 0 24 24" aria-hidden="true">${t[e]||t.heart}</svg>`}function RS(e){PS.innerHTML=`<main class="config-error" id="contenido"><span class="landing-kicker">Configuración protegida</span><h1>GlobalVet no inició en un modo ambiguo.</h1><p>${e}</p><code>Revisa apps/web/.env.example</code></main>`}function zS(){return LS.map((e,t)=>`
     <a class="landing-course-card ${t===0?`landing-course-card--featured`:``}" href="#/club/curso/${e.slug}">
       <div class="landing-course-card__media">
         <img src="${e.image}" alt="" ${t===0?``:`loading="lazy"`}>
@@ -1198,7 +1198,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
           <img class="landing-brand__logo" src="/brand/globalvet-logo-horizontal.png" alt="GlobalVet México">
         </a>
         <nav class="landing-nav" aria-label="Navegación principal">
-          <a href="#que-incluye">Qué incluye</a><a href="#cursos">Cursos</a><a href="#recursos">Recursos</a><a href="#preguntas">Preguntas</a>
+          <a href="#que-incluye">Qué incluye</a><a href="#cursos">Cursos</a><a href="#certificacion">Certificación</a><a href="#planes">Membresía</a><a href="#recursos">Recursos</a><a href="#preguntas">Preguntas</a>
         </nav>
         <a class="landing-header__cta" href="#/login">Iniciar sesión</a>
       </header>
@@ -1278,6 +1278,21 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
           </ol>
         </section>
 
+        <section class="landing-cycle" id="certificacion" aria-labelledby="ciclo-title">
+          <div class="landing-cycle__copy">
+            <p class="landing-kicker">Ciclo de aprendizaje</p>
+            <h2 id="ciclo-title">De la clase al certificado, paso a paso.</h2>
+            <p>Cada clase cierra con un repaso breve, cada curso termina con un examen y tu avance se convierte en una constancia que podrás verificar cuando la plataforma esté conectada.</p>
+            <div class="landing-cycle__note">${$(`shield`)}<span>En esta demostración los repasos y el examen se generan a partir del temario inventariado, sin contenido clínico sin revisar. El certificado oficial se emitirá desde el servidor autorizado de GlobalVet.</span></div>
+          </div>
+          <ol class="landing-cycle__steps">
+            <li><strong>Marca la clase</strong><small>Sigue el temario a tu ritmo y marca cada clase que completes.</small></li>
+            <li><strong>Cierre de tres rondas</strong><small>Un repaso rápido al terminar: palabra clave, orden del temario y pertenencia al curso.</small><em>Hasta 15 XP por clase</em></li>
+            <li><strong>Examen final</strong><small>Diez preguntas sobre el curso completo; se aprueba con 70 %.</small><em>+50 XP</em></li>
+            <li><strong>Certificado</strong><small>Genera una muestra imprimible hoy; el folio oficial y su verificación pública llegarán con el servidor.</small><em>Muestra disponible</em></li>
+          </ol>
+        </section>
+
         <section class="landing-section" id="cursos">
           <div class="landing-heading landing-heading--row"><div><p class="landing-kicker">Explora el catálogo</p><h2>Rutas que comienzan con una pregunta clínica.</h2></div><a href="#/club/cursos">Ver los 13 cursos</a></div>
           <div class="landing-course-grid">${zS()}</div>
@@ -1300,6 +1315,37 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
           </div>
         </section>
 
+        <section class="landing-offer" id="planes" aria-labelledby="planes-title">
+          <article class="landing-offer__plan">
+            <p class="landing-kicker">Membresía</p>
+            <h2 id="planes-title">Un solo acceso para todo el Club.</h2>
+            <p>La membresía reunirá cursos, biblioteca, comunidad, retos y sesiones en vivo. GlobalVet confirmará planes, vigencia y condiciones antes de abrir inscripciones; mientras tanto puedes recorrer la experiencia de miembro en modo demostración.</p>
+            <ul class="landing-offer__list">
+              <li>${$(`course`)} Rutas por área clínica</li>
+              <li>${$(`library`)} Biblioteca y materiales</li>
+              <li>${$(`community`)} Comunidad entre colegas</li>
+              <li>${$(`award`)} Retos, XP y certificados</li>
+              <li>${$(`play`)} Sesiones en vivo</li>
+              <li>${$(`tool`)} Herramientas de apoyo</li>
+            </ul>
+            <div class="landing-offer__status"><i></i><span><strong>Planes en definición.</strong> Sin precios publicados ni cobros: esta versión no inicia pagos.</span></div>
+            <div class="landing-offer__actions"><a class="landing-button landing-button--light" href="#/club/membresia">Probar la experiencia de miembro</a><a class="landing-button landing-button--glass" href="#/club">Entrar al club</a></div>
+          </article>
+          <div class="landing-offer__side">
+            <a class="landing-offer__card landing-offer__card--live" href="#/club/en-vivo"><span>${$(`play`)}</span><small>En vivo</small><strong>Sesiones con la comunidad</strong><p>Agenda de demostración con reserva local. Las fechas y ponentes reales se confirmarán por GlobalVet.</p><em>Ver agenda ${$(`arrow`)}</em></a>
+            <a class="landing-offer__card" href="#/club"><span>${$(`download`)}</span><small>Instala la app</small><strong>GlobalVet Club en tu pantalla</strong><p>Acceso directo y los contenidos visitados disponibles sin conexión. Instálala desde el Club en tu navegador.</p><em>Entrar e instalar ${$(`arrow`)}</em></a>
+          </div>
+        </section>
+
+        <section class="landing-section landing-profiles" aria-labelledby="perfiles-title">
+          <div class="landing-heading landing-heading--row"><div><p class="landing-kicker">Para quién es</p><h2 id="perfiles-title">Pensado para la práctica real.</h2></div><p class="landing-heading__aside">Tres formas de aprovechar el Club según tu momento profesional.</p></div>
+          <div class="landing-profiles__grid">
+            <article class="landing-profile"><span>${$(`paw`)}</span><h3>Clínica de pequeñas especies</h3><p>Rutas de medicina interna, dermatología, etología y rehabilitación para la consulta diaria.</p><ul><li>${$(`check`)} Repasos cortos entre consultas</li><li>${$(`check`)} Biblioteca de formatos y guías</li></ul></article>
+            <article class="landing-profile"><span>${$(`leaf`)}</span><h3>Producción y especies no convencionales</h3><p>Áreas de bovinos, aves, fauna silvestre y zoonosis con el mismo recorrido y seguimiento.</p><ul><li>${$(`check`)} Catálogo separado por disciplina</li><li>${$(`check`)} Comunidad para compartir casos</li></ul></article>
+            <article class="landing-profile"><span>${$(`spark`)}</span><h3>Estudiantes y recién egresados</h3><p>Un camino claro: primeros pasos, metas, retos y certificados de muestra para medir tu avance.</p><ul><li>${$(`check`)} Primeros pasos guiados</li><li>${$(`check`)} XP, niveles y racha</li></ul></article>
+          </div>
+        </section>
+
         <section class="landing-faq" id="preguntas">
           <div class="landing-faq__intro"><p class="landing-kicker">Preguntas frecuentes</p><h2>Lo importante, explicado con claridad.</h2><p>Esta versión demostrativa muestra la experiencia y sus límites actuales sin inventar condiciones comerciales.</p><a class="landing-button landing-button--purple" href="#/club">Explorar el club</a></div>
           <div class="landing-faq__list">
@@ -1307,6 +1353,8 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
             <details><summary>¿Los cursos que aparecen ya están publicados?<span>+</span></summary><p>No necesariamente. En esta demostración aparecen como inventariados o pendientes de validación; el modo conectado sólo debe publicar contenido aprobado.</p></details>
             <details><summary>¿Las herramientas sustituyen una evaluación veterinaria?<span>+</span></summary><p>No. Son estructuras de apoyo profesional y permanecen rotuladas como borrador hasta contar con fuentes, alcance y revisión veterinaria.</p></details>
             <details><summary>¿Funciona en computadora y celular?<span>+</span></summary><p>Sí, la interfaz se construyó de forma responsive y se revisa en ambos tamaños antes de aprobar cada bloque visual.</p></details>
+            <details><summary>¿Puedo instalar GlobalVet Club como app?<span>+</span></summary><p>Sí. Desde el Club, tu navegador ofrecerá instalarla en la pantalla de inicio; los contenidos que ya visitaste quedan disponibles sin conexión.</p></details>
+            <details><summary>¿Qué es el certificado de muestra?<span>+</span></summary><p>Una constancia de demostración que se genera en tu navegador al aprobar el examen final de un curso. No tiene validez oficial: el certificado real, su folio y la verificación pública se emitirán desde el servidor autorizado.</p></details>
           </div>
         </section>
 
@@ -1328,7 +1376,7 @@ Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.
         </div>
         <nav class="landing-footer__links" aria-label="Enlaces del pie">
           <div><strong>Explora</strong><a href="#cursos">Cursos</a><a href="#experiencia">Áreas</a><a href="#recursos">Recursos</a></div>
-          <div><strong>Tu club</strong><a href="#/club/materiales">Materiales</a><a href="#/club/comunidad">Comunidad</a><a href="#/club/retos">Retos</a></div>
+          <div><strong>Tu club</strong><a href="#/club/materiales">Materiales</a><a href="#/club/comunidad">Comunidad</a><a href="#/club/en-vivo">En vivo</a><a href="#/club/retos">Retos</a></div>
         </nav>
         <div class="landing-footer__access"><span>${$(`shield`)}</span><div><strong>Experiencia demostrativa segura</strong><small>${R.configured?`Identidad Google disponible · sin cobros ni membresía conectada.`:`Explora la propuesta sin cobros ni conexiones externas.`}</small></div><a href="#/club">Entrar al club</a></div>
         <div class="landing-footer__bottom"><small>GlobalVet Club · 2026</small><small>Contenido sujeto a revisión editorial</small><a href="#inicio">Volver arriba ↑</a></div>
