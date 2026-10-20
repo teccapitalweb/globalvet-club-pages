@@ -1,10 +1,14 @@
 {
-  "sourceRepository": "teccapitalweb/globalvet-club-unificado",
-  "sourceCommit": "dc5e616ce54ebddecac17932eb3d7e724b67b24f",
-  "deployedAt": "2026-10-15T15:58:00Z",
+  "sourceRepository": "teccapitalweb/globalvet-interior-pro",
+  "sourceBranch": "wip/globalvet-admin-2026-10-20",
+  "sourceCommit": "6c042b8867be455affefbddb5689cf4840038de4",
+  "deployedAt": "2026-10-20T17:15:09Z",
+  "replacesPagesCommit": "2a16151ce816c83f04f8ef273e2fb46fa8c6ccb9",
   "mode": "demo-with-google-auth",
   "integrations": {
     "firebaseGoogle": true,
-    "stripe": false
+    "stripe": false,
+    "productApi": false,
+    "memberApi": false
   }
 }
