@@ -1,9 +1,9 @@
 {
   "sourceRepository": "teccapitalweb/globalvet-interior-pro",
   "sourceBranch": "main",
-  "sourceCommit": "f75779da749517f64c158ca52cf5900235a66bcf",
-  "deployedAt": "2026-10-24T21:33:01Z",
-  "replacesPagesCommit": "067f89d742f1d6dd06cbf65c273f6de973c682de",
+  "sourceCommit": "2c748719714a91781340b2d8cdceed28eed5f389",
+  "deployedAt": "2026-10-24T21:41:37Z",
+  "replacesPagesCommit": "71fd668",
   "mode": "demo-with-google-auth",
   "integrations": { "firebaseGoogle": true, "stripe": false, "productApi": false, "memberApi": false }
 }
