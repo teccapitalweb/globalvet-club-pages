@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Banner Producción Dorada</title><desc id="desc">Fondo dorado y púrpura para liderazgo productivo.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25103f"/><stop offset=".55" stop-color="#5b287f"/><stop offset="1" stop-color="#d19528"/></linearGradient><linearGradient id="gold" x1="0" x2="1"><stop stop-color="#fff0a6"/><stop offset="1" stop-color="#e4a52a"/></linearGradient></defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/><path d="M720-70 1200 0v360H890Z" fill="#f4c85b" fill-opacity=".16"/><path d="m820 0 380 0v360H1040Z" fill="#fff" fill-opacity=".08"/>
+  <g transform="translate(786 80)" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M30 147c46-62 85-91 118-87 43 5 63 63 120 62 42-1 70-35 102-91"/><path d="m344 33 30-6-7 30"/><path d="M31 190h352"/></g>
+  <g fill="#ffe28c" fill-opacity=".8"><circle cx="827" cy="269" r="7"/><circle cx="932" cy="225" r="7"/><circle cx="1054" cy="201" r="7"/></g>
+  <text x="72" y="84" fill="#fff" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="5">GLOBALVET CLUB</text><text x="72" y="126" fill="#ffe291" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">PRODUCCIÓN · LIDERAZGO · RESULTADOS</text>
+  <rect x="72" y="234" width="238" height="5" rx="3" fill="url(#gold)"/><rect x="72" y="255" width="148" height="5" rx="3" fill="#fff" fill-opacity=".34"/>
+</svg>

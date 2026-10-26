@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Banner Campo Esmeralda</title><desc id="desc">Fondo verde profesional inspirado en campo y producción responsable.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123f31"/><stop offset=".5" stop-color="#238b62"/><stop offset="1" stop-color="#89d6a8"/></linearGradient><radialGradient id="sun"><stop stop-color="#fff6c5" stop-opacity=".9"/><stop offset="1" stop-color="#fff6c5" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/><circle cx="1000" cy="70" r="220" fill="url(#sun)"/>
+  <path d="M0 264c170-96 310-92 468-12 190 96 370 80 732-74v182H0Z" fill="#f7f0d8" fill-opacity=".2"/>
+  <path d="M0 302c184-76 353-64 509 5 184 82 385 59 691-46v99H0Z" fill="#f8fbf7" fill-opacity=".32"/>
+  <g fill="none" stroke="#fff" stroke-opacity=".58" stroke-width="5" stroke-linecap="round"><path d="M82 273c42-89 94-137 156-144 54-6 89 23 127 68"/><path d="M124 238c53 3 95 18 126 47"/><path d="M189 151c8 61 1 113-22 156"/></g>
+  <g transform="translate(835 188)" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="4"><path d="M0 76h245M34 76V26l48-28 48 28v50M82-2v78M148 76V35h72v41"/><path d="M18 17h32M164 52h16m20 0h16"/></g>
+  <text x="74" y="80" fill="#fff" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="5">GLOBALVET CLUB</text><text x="74" y="118" fill="#e7fff1" font-family="Arial, sans-serif" font-size="15" letter-spacing="2">CAMPO · CONOCIMIENTO · FUTURO</text>
+</svg>
