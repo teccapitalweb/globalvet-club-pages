@@ -1,9 +1,9 @@
 {
   "sourceRepository": "teccapitalweb/globalvet-interior-pro",
   "sourceBranch": "improve/globalvet-directorio-profesional",
-  "sourceCommit": "ab77993dfd9b2e7b94639694de5fdc58cf8ddec3",
-  "deployedAt": "2026-10-26T18:55:44Z",
-  "replacesPagesCommit": "1f15ac994a4f477a101eddcae6c1cc02186caa30",
+  "sourceCommit": "606c486c7cf1f131a07e845561968c5b6c1b32de",
+  "deployedAt": "2026-10-26T19:03:40Z",
+  "replacesPagesCommit": "380e4aad06e8f682ace330915e4f25da998aea50",
   "mode": "demo-content-with-google-auth-live-billing-and-secure-rewards",
   "integrations": { "firebaseGoogle": true, "stripe": true, "billingApi": true, "rewardsApi": true, "productApi": false, "memberApi": false }
 }
